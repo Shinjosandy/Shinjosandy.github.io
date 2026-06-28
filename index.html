@@ -703,6 +703,84 @@
         margin-top: 3px;
       }
 
+      /* EXPERIENCE */
+
+      #experience {
+        background: var(--bg);
+      }
+
+      .exp-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .exp-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--green);
+        padding: 28px;
+        transition: 0.3s;
+      }
+
+      .exp-card:hover {
+        transform: translateX(6px);
+        border-color: var(--green);
+      }
+
+      .exp-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .exp-title {
+        font-family: var(--mono);
+        font-size: 1.1rem;
+        color: var(--green);
+      }
+
+      .exp-company {
+        font-size: 0.95rem;
+        color: var(--text);
+        margin-top: 4px;
+      }
+
+      .exp-role {
+        color: var(--teal);
+        font-size: 0.85rem;
+        margin-top: 5px;
+      }
+
+      .exp-date {
+        font-family: var(--mono);
+        color: var(--muted);
+        font-size: 0.72rem;
+      }
+
+      .exp-desc {
+        color: var(--muted);
+        line-height: 1.8;
+        margin-bottom: 18px;
+      }
+
+      .exp-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .exp-stack span {
+        border: 1px solid rgba(0, 255, 136, 0.2);
+        color: var(--green);
+        font-family: var(--mono);
+        font-size: 0.65rem;
+        padding: 4px 10px;
+      }
+
       /* PROJECTS */
       #projects {
         position: relative;
@@ -1299,6 +1377,7 @@
       <div class="nav-logo">SC<span>://</span>portfolio<span>.v3</span></div>
       <ul class="nav-links">
         <li><a href="#about">about</a></li>
+        <li><a href="#experience">experience</a></li>
         <li><a href="#projects">projects</a></li>
         <li><a href="#skills">skills</a></li>
         <li><a href="#education">education</a></li>
@@ -1584,11 +1663,81 @@
       </div>
     </section>
 
+    <section id="experience">
+      <p class="sec-label">02 / EXPERIENCE</p>
+
+      <h2 class="sec-h">Where I'm <em>building.</em></h2>
+
+      <div class="exp-grid reveal">
+        <div class="exp-card">
+          <div class="exp-top">
+            <div>
+              <div class="exp-title">🛡 Cybersecurity Intern</div>
+
+              <div class="exp-company">
+                Bhabha Atomic Research Centre (BARC)
+              </div>
+
+              <div class="exp-role">Cybersecurity Intern</div>
+            </div>
+
+            <div class="exp-date">Jun 2026 – Present</div>
+          </div>
+
+          <div class="exp-desc">
+            Working on Trusted Platform Module (TPM 2.0) based security
+            solutions, implementing secure device authentication,
+            certificate-backed identity verification, and hybrid cryptographic
+            mechanisms for secure file protection.
+          </div>
+
+          <div class="exp-stack">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>TPM 2.0</span>
+            <span>RSA</span>
+            <span>AES-256</span>
+            <span>SQLite</span>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-top">
+            <div>
+              <div class="exp-title">🤖 AI/ML Intern</div>
+
+              <div class="exp-company">Data Vidwan</div>
+
+              <div class="exp-role">
+                Artificial Intelligence & Machine Learning Intern
+              </div>
+            </div>
+
+            <div class="exp-date">May 2026 – Present</div>
+          </div>
+
+          <div class="exp-desc">
+            Working on practical Machine Learning projects involving data
+            preprocessing, model development, evaluation, and real-world AI
+            applications as part of an ongoing industry internship.
+          </div>
+
+          <div class="exp-stack">
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Scikit-Learn</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="projects">
       <div class="hex-bg"></div>
       <p class="sec-label" style="position: relative; z-index: 1">
-        02 / PROJECTS
+        03 / PROJECTS
       </p>
       <h2 class="sec-h" style="position: relative; z-index: 1">
         Things I've <em>built.</em>
@@ -1662,12 +1811,42 @@
             ><span class="stag">VAPT</span>
           </div>
         </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-num">04</div>
+
+          <div class="proj-badge-row">
+            <span class="proj-type sec">🛡️ CYBERSECURITY</span>
+            <span class="proj-date">JUN 2026 – PRESENT</span>
+          </div>
+
+          <div class="proj-title-card">
+            TPM-Based Secure Authentication &amp; File Encryption
+          </div>
+
+          <p class="proj-desc-card">
+            Developed a Trusted Platform Module (TPM 2.0) based security system
+            for hardware-backed device authentication and secure key management.
+            Implemented challenge-response authentication using RSA digital
+            signatures and currently extending the system with hybrid AES-256
+            file encryption for secure file protection.
+          </p>
+
+          <div class="proj-stack-row">
+            <span class="stag">Python</span>
+            <span class="stag">Flask</span>
+            <span class="stag">TPM 2.0</span>
+            <span class="stag">RSA</span>
+            <span class="stag">AES-256</span>
+            <span class="stag">SQLite</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills">
-      <p class="sec-label">03 / SKILLS</p>
+      <p class="sec-label">04 / SKILLS</p>
       <h2 class="sec-h">Technical <em>arsenal.</em></h2>
       <div class="skills-tabs">
         <div class="sk-tab active" onclick="switchSkill('security')">
@@ -1929,7 +2108,7 @@
 
     <!-- EDUCATION -->
     <section id="education">
-      <p class="sec-label">04 / EDUCATION &amp; CERTS</p>
+      <p class="sec-label">05 / EDUCATION &amp; CERTS</p>
       <h2 class="sec-h">Background &amp; <em>credentials.</em></h2>
       <div class="edu-grid">
         <div class="reveal">
@@ -2001,7 +2180,7 @@
 
     <!-- CONTACT -->
     <section id="contact">
-      <p class="sec-label">05 / CONTACT</p>
+      <p class="sec-label">06 / CONTACT</p>
       <div class="contact-layout">
         <div class="contact-left reveal">
           <h2 class="sec-h">Let's <em>connect.</em></h2>
